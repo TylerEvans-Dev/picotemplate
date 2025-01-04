@@ -4,7 +4,6 @@ to use this file
 to run this program one will need to use the files listed inside the pico documentation
 depending on the opreating system.
 link picodocs https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf
-'
+,
 testing code here
-
- '
+,
