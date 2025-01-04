@@ -1,0 +1,6 @@
+#Tyler Evans u1313811
+#to access create this Cmake file I used
+#this vid to understand cmake https://www.youtube.com/watch?v=7YcbaupsY8I
+
+#command creates project
+project(project)
