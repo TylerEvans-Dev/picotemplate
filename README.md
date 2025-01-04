@@ -7,8 +7,30 @@ follow [pico docs][1]
 
 [1]: https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf
 
+## To download files
+ ```
+ git clone https://github.com/TylerEvans-Dev/picotemplate.git
+ ```
+## Once downloaded
+
 ```
-//this would be how to do a comment in C
-www.nasa.gov
+git submodules update --init --recuresive
+
 ```
-# no more code should be here
+
+## generate Cmake files
+
+```
+cmake -B build -S .
+
+```
+
+## finally plug in pico holding bootsel load the program onto the pico by typing the following
+
+``` picotool load /build/ (project_name)/ (something_named).elf && picotool reboot -f
+```
+# any questions about this template email me at
+evstye@gmail.com
+or text 385-375-1437
+best,
+Tyler.
