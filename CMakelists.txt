@@ -2,7 +2,29 @@
 #to access create this Cmake file I used
 #this vid to understand cmake https://www.youtube.com/watch?v=7YcbaupsY8I
 
-#command creates project
-cmake_minimum_required(VERSION 3.1)
+#command creates project and sets min version for cmake
+cmake_minimum_required(VERSION 3.13)
+
+#here is project name it is in C C++ and ASEM.
+project(project C CXX ASM)
+
+#define the stand. for c and c++
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+#this gets the cmake from the pico sdk
+include($ENV{/include/pico-sdk/}pico_sdk_init.cmake)
+
+#done becasue it inits the sdk
+pico_sdk_init()
+
 project(project)
+
+
+#this links the pico sdk with the lib
+target_link_libraries(project pico_stdlib)
+
 add_executable(project src/main.c)
+
+#this enables usb reading from screen command
+pico_enable_stdio_usb(project 1)
